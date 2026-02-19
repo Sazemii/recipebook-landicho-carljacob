@@ -9,7 +9,9 @@ class Ingredient(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('recipe-detail', args=[self.pk])
+        # No dedicated Ingredient detail view per specs,
+        # so just send them to the recipe list.
+        return reverse('recipes-list')
 
 
 class Recipe(models.Model):
