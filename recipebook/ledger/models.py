@@ -20,7 +20,7 @@ class Ingredient(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('recipes-list')
+        return reverse('ingredients-list')
 
 
 class Recipe(models.Model):
