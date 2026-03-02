@@ -1,5 +1,5 @@
-{% extends "ledger/base.html" %} {% block content %}
-<h2>All Recipes</h2>
+{% extends "ledger/base.html" %} {% block page_title %}All Recipes{% endblock %}
+{% block content %}
 <ul>
   {% for recipe in object_list %}
   <li>
