@@ -7,4 +7,14 @@
   <li>{{ ingredient.ingredient.name }} - {{ ingredient.quantity }}</li>
   {% endfor %}
 </ul>
+
+<h3>Images</h3>
+{% for image in object.images.all %}
+<div>
+  <img src="{{ image.image.url }}" alt="{{ image.description }}">
+  <p>{{ image.description }}</p>
+</div>
+{% endfor %}
+
+<a href="{% url 'recipe-add-image' pk=object.pk %}">Upload Image</a>
 {% endblock %}
